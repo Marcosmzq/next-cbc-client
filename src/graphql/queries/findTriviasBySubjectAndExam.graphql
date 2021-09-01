@@ -1,0 +1,11 @@
+query FindTriviasBySubjectAndSemester($subject: String!, $exam: String!) {
+  findBySubjectAndExam(subject: $subject, exam: $exam) {
+    ...TriviaSnippet
+    triviaAnswers {
+      ...AnswerSnippet
+    }
+    answersJustifications {
+      ...AnswerJustificationSnippet
+    }
+  }
+}

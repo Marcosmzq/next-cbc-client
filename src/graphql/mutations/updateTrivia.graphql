@@ -1,0 +1,21 @@
+mutation UpdateTrivia(
+  $id: Int!
+  $exam: String
+  $subject: String
+  $question: String
+  $explanation: String
+  $reference: String
+) {
+  updateTrivia(
+    updateTriviaInput: {
+      id: $id
+      exam: $exam
+      subject: $subject
+      question: $question
+      explanation: $explanation
+      reference: $reference
+    }
+  ) {
+    ...TriviaSnippet
+  }
+}

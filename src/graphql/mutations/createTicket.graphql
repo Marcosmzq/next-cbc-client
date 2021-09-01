@@ -1,0 +1,10 @@
+mutation CreateTicket($userId: Int!, $title: String!, $message: String!) {
+  createTicket(
+    createTicketInput: { userId: $userId, title: $title, message: $message }
+  ) {
+    ...TicketSnippet
+    user {
+      ...UserSnippet
+    }
+  }
+}

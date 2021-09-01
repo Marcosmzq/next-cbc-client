@@ -1,0 +1,17 @@
+mutation UpdateTriviaAnswer(
+  $answerId: Int!
+  $triviaId: Int!
+  $updatedAnswer: String
+  $updatedStatus: Boolean
+) {
+  updateTriviaAnswer(
+    updateTriviaAnswerInput: {
+      answerId: $answerId
+      triviaId: $triviaId
+      answer: $updatedAnswer
+      status: $updatedStatus
+    }
+  ) {
+    ...AnswerSnippet
+  }
+}

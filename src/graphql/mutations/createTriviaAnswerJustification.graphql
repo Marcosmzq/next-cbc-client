@@ -1,0 +1,15 @@
+mutation CreateTriviaAnswerJustification(
+  $triviaId: Int!
+  $answer: String!
+  $status: Boolean!
+) {
+  createTriviaAnswerJustification(
+    createTriviaAnswerJustificationInput: {
+      triviaId: $triviaId
+      answer: $answer
+      status: $status
+    }
+  ) {
+    ...AnswerJustificationSnippet
+  }
+}

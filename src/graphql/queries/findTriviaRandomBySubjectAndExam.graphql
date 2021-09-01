@@ -1,0 +1,11 @@
+query findRandomTriviaBySubjectAndExam($exam: String!, $subject: String!) {
+  findRandomTriviaBySubjectAndExam(exam: $exam, subject: $subject) {
+    ...TriviaSnippet
+    triviaAnswers {
+      ...AnswerSnippet
+    }
+    answersJustifications {
+      ...AnswerJustificationSnippet
+    }
+  }
+}

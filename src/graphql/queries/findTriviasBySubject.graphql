@@ -1,0 +1,11 @@
+query FindTriviasBySubject($subject: String!) {
+  findBySubject(subject: $subject) {
+    ...TriviaSnippet
+    triviaAnswers {
+      ...AnswerSnippet
+    }
+    answersJustifications {
+      ...AnswerJustificationSnippet
+    }
+  }
+}

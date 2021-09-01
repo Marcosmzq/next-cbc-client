@@ -1,0 +1,5 @@
+query FindUserById($id: Int!) {
+  findUserById(id: $id) {
+    ...UserSnippet
+  }
+}

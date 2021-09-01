@@ -1,0 +1,8 @@
+query FindTicketById($id: Int!) {
+  findTicketById(id: $id) {
+    ...TicketSnippet
+    user {
+      ...UserSnippet
+    }
+  }
+}

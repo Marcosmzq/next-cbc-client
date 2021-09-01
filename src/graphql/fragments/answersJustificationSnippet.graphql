@@ -1,0 +1,7 @@
+fragment AnswerJustificationSnippet on AnswersJustification {
+  id
+  created_at
+  updated_at
+  status
+  answer
+}
